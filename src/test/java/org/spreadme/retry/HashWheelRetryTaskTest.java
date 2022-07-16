@@ -8,9 +8,9 @@ import org.junit.Test;
 public class HashWheelRetryTaskTest {
     
     @Test
-    public void testHashWheelRetryTask() throws InterruptedException {
+    public void testHashWheelRetryTask() throws Exception {
         TestRetryTask retryTask = new TestRetryTask("test retry");
-        retryTask.setDelay(10);
+        retryTask.setDelay(5);
         retryTask.setTimeUnit(TimeUnit.SECONDS);
         retryTask.setMaxTimes(3);
         String result = retryTask.execute();
